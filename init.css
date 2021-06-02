@@ -1,7 +1,10 @@
 html {
     max-width: 390px;
     margin: auto;
-    font-family: adobe-caslon-pro;
+}
+
+.col-lg-1.col-12,.my-5.ls-0.most-read-articles {
+    display:none;
 }
 img {
     width:auto;
@@ -33,33 +36,83 @@ a {
 }
 
 h1 {
-    font-family: Atlas Grotesk Web;
-    font-size: 2rem;
+    margin-top:10px;
+    font-family: Georgia;
+    font-weight: 600;
+    font-size:2rem;
 }
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: -10 0 0 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia;
 }
 h3 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     margin-top: 30;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
 }
 p {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
     font-family: adobe-caslon-pro;
+    font-weight: 400;
 }
 
 .internal-blockquote.offset {
     font-family: adobe-caslon-pro;
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
+    line-height: 2rem;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 700;
     border-top: 1px solid black;
     display:block;
-    margin-block-start: 1rem;
+    margin-block-start: 0.5rem;
+}
+
+.article-inline-img-block--caption {
+    font-family: "Atlas Grotesk Web", sans-serif;
+    font-size: 0.8rem;
+}
+
+.article-inline-img-block--photo-credit {
+    color: gray;
+    font-family: "Atlas Grotesk Web", sans-serif;
+    font-size: 0.7rem;
+}
+
+.article-header--metadata-topic.align-self-center {
+    display: none;
+
+}
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url("./assets/AtlasGrotesk-Regular-Web.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url("./assets/AtlasGrotesk-RegularItalic-Web.woff") format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "adobe-caslon-pro";
+    src: url("./assets/adobe-caslon-pro_normal.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "adobe-caslon-pro";
+    src: url("./assets/adobe-caslon-pro_italic.woff") format("woff");
+    font-display: swap;
+    font-style: italic;
 }

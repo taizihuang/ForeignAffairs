@@ -1,0 +1,92 @@
+html {
+    max-width: 350px;
+    margin: auto;
+}
+body {
+    width: 350px;
+}
+figure {
+    width:250px;
+    margin-left:50px;
+}
+img {
+    margin-left:10px;
+    width:200px;
+}
+
+a.article-card {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+}
+
+img.col-4 {
+    flex: 0 0 40%;
+    margin: 0 0 0 0;
+    max-width:100px;
+}
+.article {
+    flex: 0 0 60%;
+    max-width: 100%;
+    padding-left: 20px;
+    margin: 0 0 0 -50;
+
+}
+
+h3 {
+    font-family: Atlas Grotesk Web;
+    font-size: 1rem;
+    margin-top: 0rem;
+    line-height:1.3rem;
+}
+h4 {
+    font-family: adobe-caslon-pro;
+    margin-top: -0.5rem;
+    font-size:0.8rem;
+    font-weight:100;
+    line-height:1rem;
+    font-style:italic;
+}
+p {
+    font-family: adobe-caslon-pro;
+    color:#707881;
+    margin-top: -0.5rem;
+    font-size:1rem;
+    line-height:1rem;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url("./assets/AtlasGrotesk-Regular-Web.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Atlas Grotesk Web';
+    src: url("./assets/AtlasGrotesk-RegularItalic-Web.woff") format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "adobe-caslon-pro";
+    src: url("./assets/adobe-caslon-pro_normal.woff") format("woff");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "adobe-caslon-pro";
+    src: url("./assets/adobe-caslon-pro_italic.woff") format("woff");
+    font-display: swap;
+    font-style: italic;
+}
