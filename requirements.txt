@@ -1,0 +1,6 @@
+requests
+lxml
+bs4
+pandas
+Mako
+numpy
