@@ -3,9 +3,6 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from mako.template import Template
 
-os.environ['http_proxy'] = "http://127.0.0.1:7890" 
-os.environ['https_proxy'] = "http://127.0.0.1:7890"
-
 def fetchCover(link):
     r = requests.get(link)
     doc = BeautifulSoup(r.content,features='lxml')
