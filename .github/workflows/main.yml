@@ -37,6 +37,7 @@ jobs:
         
       - name: git push
         run: |
+          git stash
           git pull origin master -r
           git add .
           git config --global user.name "Taizi Huang"
