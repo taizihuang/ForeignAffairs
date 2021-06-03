@@ -1,13 +1,16 @@
 html {
-    max-width: 350px;
+    width: 100%;
+    max-width: 900px;
     margin: auto;
 }
 body {
-    width: 350px;
+    width: 90%;
+    padding: 10px;
+    margin: auto;
 }
 figure {
     width:250px;
-    margin-left:50px;
+    margin: auto;
 }
 img {
     margin-left:10px;
@@ -17,42 +20,44 @@ img {
 a.article-card {
     display: flex;
     flex-wrap: nowrap;
+    margin: auto;
     padding-bottom: 20px;
 }
 
 img.col-4 {
     flex: 0 0 40%;
     margin: 0 0 0 0;
-    max-width:100px;
+    width: 100%;
+    max-width:120px;
 }
 .article {
     flex: 0 0 60%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 700px;
     padding-left: 20px;
-    margin: 0 0 0 -50;
-
+    margin: 0 0 0 -40;
 }
 
 h3 {
     font-family: Atlas Grotesk Web;
-    font-size: 1rem;
+    font-size: max(2.3vmin,1rem);
     margin-top: 0rem;
-    line-height:1.3rem;
+    line-height:max(2.5vmin,1.2rem);
 }
 h4 {
     font-family: adobe-caslon-pro;
     margin-top: -0.5rem;
-    font-size:0.8rem;
+    font-size: max(2.3vmin,1rem);
     font-weight:100;
-    line-height:1rem;
+    line-height:max(2.5vmin,1.2rem);
     font-style:italic;
 }
 p {
     font-family: adobe-caslon-pro;
     color:#707881;
     margin-top: -0.5rem;
-    font-size:1rem;
-    line-height:1rem;
+    font-size:max(2.3vmin,1rem);
+    line-height:max(2.5vmin,1.2rem);
 }
 a{
     color: black;
