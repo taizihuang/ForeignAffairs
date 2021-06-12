@@ -9,7 +9,7 @@ def fetchCover(link):
     title = doc.find(class_="row article-header--metadata-title")
     titlename = title.find(class_="f-serif ls-0 article-title pt-2").text
     post = doc.find(class_="container article-container")
-    html = '<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1" /><head><link rel="stylesheet" href="../init.css"><title>'+titlename+'</title></head><body>'+str(title)+str(post)+'</body></html>'
+    html = '<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1" /><head><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z85NNYZRHX"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-Z85NNYZRHX');</script><link rel="stylesheet" href="../init.css"><title>'+titlename+'</title></head><body>'+str(title)+str(post)+'</body></html>'
     with open('./html/'+link.split('/')[-1]+'.html','w') as f:
         f.write(html)
     return
@@ -38,7 +38,7 @@ def fetchArticle(link):
                 f.write(img)
             i.attrs['src'] = '../image/'+ url.split('/')[-1].split('?')[0].replace('%','')
             i.attrs['data-src'] = '../image/'+ url.split('/')[-1].split('?')[0].replace('%','')
-    html = '<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1" /><head><link rel="stylesheet" href="../init.css"><title>'+titlename+'</title></head><body>'+str(coverImage)+str(title)+str(post)+'</body></html>'
+    html = '<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1" /><head><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z85NNYZRHX"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-Z85NNYZRHX');</script><link rel="stylesheet" href="../init.css"><title>'+titlename+'</title></head><body>'+str(coverImage)+str(title)+str(post)+'</body></html>'
     with open('./html/'+link.split('/')[-1]+'.html','w') as f:
         f.write(html)
     return
@@ -119,6 +119,15 @@ HTML = Template("""<!DOCTYPE html>
 <html>
 
 <head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z85NNYZRHX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z85NNYZRHX');
+</script>
   <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name=viewport>
   <meta charset=utf-8>
   <link rel="stylesheet" href="./index.css">
