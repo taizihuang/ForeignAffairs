@@ -9,7 +9,7 @@ def fetchCover(link):
     title = doc.find(class_="row article-header--metadata-title")
     titlename = title.find(class_="f-serif ls-0 article-title pt-2").text
     post = doc.find(class_="container article-container")
-    html = '<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1" /><head><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z85NNYZRHX"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}  gtag('js', new Date());  gtag('config', 'G-Z85NNYZRHX');</script><link rel="stylesheet" href="../init.css"><title>'+titlename+'</title></head><body>'+str(title)+str(post)+'</body></html>'
+    html = '<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1" /><head><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z85NNYZRHX"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}  gtag("js", new Date());  gtag("config", "G-Z85NNYZRHX");</script><link rel="stylesheet" href="../init.css"><title>'+titlename+'</title></head><body>'+str(title)+str(post)+'</body></html>'
     with open('./html/'+link.split('/')[-1]+'.html','w') as f:
         f.write(html)
     return
