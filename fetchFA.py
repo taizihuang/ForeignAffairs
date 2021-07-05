@@ -131,7 +131,7 @@ HTML = Template("""<!DOCTYPE html>
   <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name=viewport>
   <meta charset=utf-8>
   <link rel="stylesheet" href="./index.css">
-  <title>Trade Wars</title>
+  <title>${cover_title}</title>
 </head>
 
 <body>
