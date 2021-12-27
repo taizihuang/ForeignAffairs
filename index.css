@@ -52,6 +52,15 @@ h4 {
     line-height:max(2.5vmin,1.2rem);
     font-style:italic;
 }
+a.article-author {
+    font-family: adobe-caslon-pro;
+    margin-top: -0.5rem;
+    font-size: max(2.3vmin,1rem);
+    font-weight:100;
+    line-height:max(2.5vmin,1.2rem);
+    font-style:italic;
+    padding-right: 10px;
+}
 p {
     font-family: adobe-caslon-pro;
     color:#707881;
