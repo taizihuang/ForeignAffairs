@@ -3,6 +3,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from mako.template import Template
 
+
 def fetchCover(link):
     r = requests.get(link)
     doc = BeautifulSoup(r.content,features='lxml')
