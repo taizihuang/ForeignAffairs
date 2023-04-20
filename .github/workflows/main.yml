@@ -33,8 +33,8 @@ jobs:
         run: |
           git pull
           rm html/*.html 
-          rm image/*.jpg 
-          rm image/*.png
+          #rm image/*.jpg 
+          #rm image/*.png
           python fetchFA.py
         
       - name: git push
