@@ -10,25 +10,25 @@ def fetchArticle(link):
     title = doc.find(class_="row article-header--metadata-title")
     titlename = title.find(class_="f-serif ls-0 article-title pt-2").text
     post = doc.find(class_="article-content-offset")
-    coverImageURL = coverImage.find("img").attrs['data-src']
+    coverImageURL = coverImage.find("img").attrs['srcset'].split(',')[-1]
     img = requests.get(coverImageURL).content
     coverFile = './image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
     with open(coverFile,'wb') as f:
         f.write(img)
-    coverImage.find("img").attrs['data-src'] = '../image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
+    coverImage.find("img").attrs['srcset'] = '../image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
     coverImage.find("img").attrs['src'] = '../image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
 
     for i in post.findAll("img"):
-        url = i.attrs['data-src']
+        url = i.attrs['srcset'].split(',')[-1]
         if './image' not in url:
             img = requests.get(url).content
             imgfile = './image/'+ url.split('/')[-1].split('?')[0].replace('%','')
             with open(imgfile,'wb') as f:
                 f.write(img)
             i.attrs['src'] = '../image/'+ url.split('/')[-1].split('?')[0].replace('%','')
-            i.attrs['data-src'] = '../image/'+ url.split('/')[-1].split('?')[0].replace('%','')
+            i.attrs['srcset'] = ''
     html = '<html lang="en"><meta name="viewport" content="width=device-width, initial-scale=1" /><head><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-Z85NNYZRHX"></script><script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}  gtag("js", new Date());  gtag("config", "G-Z85NNYZRHX");</script><link rel="stylesheet" href="../init.css"><title>'+titlename+'</title></head><body>'+str(coverImage)+str(title)+str(post)+'</body></html>'
-    with open('./html/'+link.split('/')[-1]+'.html','w') as f:
+    with open('./html/'+link.split('/')[-1]+'.html','w',encoding='utf8') as f:
         f.write(html)
     return
 
