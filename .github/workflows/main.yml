@@ -27,7 +27,6 @@ jobs:
 
       - name: install dependencies
         run: pip install --upgrade -r requirements.txt
-
       
       - name: run script
         run: |
