@@ -10,13 +10,14 @@ def fetchArticle(link):
     title = doc.find(class_="row article-header--metadata-title")
     titlename = title.find(class_="f-serif ls-0 article-title pt-2").text
     post = doc.find(class_="article-content-offset")
-    coverImageURL = coverImage.find("img").attrs['srcset'].split(',')[-1]
-    img = requests.get(coverImageURL).content
-    coverFile = './image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
-    with open(coverFile,'wb') as f:
-        f.write(img)
-    coverImage.find("img").attrs['srcset'] = '../image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
-    coverImage.find("img").attrs['src'] = '../image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
+    if coverImage:
+      coverImageURL = coverImage.find("img").attrs['srcset'].split(',')[-1]
+      img = requests.get(coverImageURL).content
+      coverFile = './image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
+      with open(coverFile,'wb') as f:
+          f.write(img)
+      coverImage.find("img").attrs['srcset'] = '../image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
+      coverImage.find("img").attrs['src'] = '../image/' + coverImageURL.split('/')[-1].split('?')[0].replace('%','')
 
     for i in post.findAll("img"):
         url = i.attrs['srcset'].split(',')[-1]
